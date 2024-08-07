@@ -93,7 +93,7 @@ def object_id():
 
 def object_copy():
     """
-    객체의 복제.
+    객체의 복제
     """
 
     # 참조 복제 _ 불변자료형
