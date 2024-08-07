@@ -172,10 +172,6 @@ def dict_comprehension():
     print(len_dict)
 
 
-
-
-
-
 if __name__ == "__main__":
     #if_statement()
     #conditional_Exp()
@@ -183,3 +179,4 @@ if __name__ == "__main__":
     #list_comprehension()
     #set_comprehension()
     dict_comprehension()
+
