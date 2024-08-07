@@ -119,4 +119,4 @@ def for_ex():
 if __name__ == "__main__":
     #if_statement()
     #conditional_Exp()
-    #for_ex()
+    for_ex()
