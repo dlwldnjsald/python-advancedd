@@ -96,7 +96,7 @@ def object_copy():
     객체의 복제
     """
 
-    # 참조 복제 _ 불변자료형
+    # reference 참조 복제 _ 불변자료형
     a = 1
     b = a
     print(a, b, a is b)
@@ -110,20 +110,40 @@ def object_copy():
     x = [a, b, 100]
 
     """
+    # 1) reference 참조 활용한 복제
     y = x
+    print("x:", x)
+    print("y:", y)
+    print("x is y:", x is y) # True
 
     y[2] = 10 
     print("y:", y) 
     print("x:", x) # x[2] == 10 으로 변하게됨
-    """
+    
 
+    # 2) slicing 활용한 복제
     y = x[:]
+        # y = copy.copy(x) # shallow copy 얕은 카피
+
+    print("x:", x)
+    print("y:", y)
+    print("x is y:", x is y) # False
 
     y[2] = 10
     print("y:", y)
     print("x:", x)  # x[2] == 100 으로 원본데이터 유지됨
+    """
 
+    # 3) copy 모듈의 copy 함수, deep copy 딥 카피 활용한 복제
+    import copy
+    y = copy.deepcopy(x)
+    print("x:", x)
+    print("y:", y)
 
+    y[2] = 10
+    y[0][1] = 10 # y의 0번째의 1번째 인덱스의 값 -> 10
+    print("x:", x)
+    print("y:", y)
 
 
 
