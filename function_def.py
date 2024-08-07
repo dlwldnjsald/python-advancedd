@@ -76,3 +76,5 @@ print(callable(fun)) # fun은 실행가능한 객체? 여부
 
 if callable(fun):
     print("fun:", fun(10,10)) # fun이 실행 가능한 객체라면 호출
+
+
