@@ -95,12 +95,12 @@ def for_ex():
     # 2 x 2 = 4
     # 2 x 3 = 6
     # ...
+
     #for 안의 for loop의 올바른 방식
     for i in range(2,10):
-        for j in range(2,10):
+        for j in range(1,10):
             print(f"{i} x {j} = {i * j}")
-            print()
-
+        print()
 
     # 연습문제 2.
     # * 그리기
@@ -116,7 +116,70 @@ def for_ex():
     #list_comprehension
     [print('*' * i) for i in range(1,6)]
 
+
+def list_comprehension():
+    """
+    리스트 내포
+    syntax: [표현식 for 타겟 in 순차자료형]
+    """
+
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # 내부 요소들을 2배한 새 리스트를 생성
+
+    result = []
+    for num in data:
+        result.append(num*2)
+
+    print("data:", data)
+    print("result1:", result)
+
+    # list comprehension
+    result = [num * 2 for num in data]
+    print("result2:", result)
+
+
+    strings = ["a", "as", "bat", "car", "dove", "python"]
+    # 문자열 리스트에서 문자열의 길이가 3 이상인 문자열 목록 만들기
+
+    result = [lst.upper() for lst in strings if len(lst) >= 3]
+    print("lst:", result)
+
+
+    # 1- 100 int 중 3의 배수만 뽑아서 새 목록 만들기
+    result = [i for i in range(1,101) if i % 3 == 0]
+    print("3의 배수:", result)
+
+
+def set_comprehension():
+    """
+    set_comprehension
+    syntax: {표현식 for 타겟변수 in 순차형 if 조건}
+    """
+    strings = ["a", "as", "bat", "car", "dove", "python"]
+    # strings 리스트에서 각 단어의 길이를 set 만들기
+    lens = {len(s) for s in strings}
+    print("lens:", lens)
+
+
+def dict_comprehension():
+    """
+    dict_comprehension
+    : syntax: {키표현식:값표현식 for 타겟변수 in 순차형}
+    """
+    strings = ["a", "as", "bat", "car", "dove", "python"]
+    # {"a":1, "as":2, ... , "python":6}
+    len_dict = {s:len(s) for s in strings}
+    print(len_dict)
+
+
+
+
+
+
 if __name__ == "__main__":
     #if_statement()
     #conditional_Exp()
-    for_ex()
+    #for_ex()
+    #list_comprehension()
+    #set_comprehension()
+    dict_comprehension()
