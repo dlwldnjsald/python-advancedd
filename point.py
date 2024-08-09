@@ -139,3 +139,12 @@ class MyNumber:
 
     def __repr__(self):
         return f"비트연산자 &=: {self.value}"
+
+
+#클래스 인스턴스를 함수처럼 호출
+class Adder:
+    def __init__(self, value):
+        self.value = value
+
+    def __call__(self, x):
+        return self.value + x

@@ -1,5 +1,6 @@
 from point import Point
 from point import MyNumber
+from point import Adder
 
 def bound_instance_method():
     """
@@ -136,9 +137,11 @@ def oper_overriding():
 
 
 
-    # 연습
-    # 산술 연산자, 역이항 연산자, 비교 연산자
-    # 오버라이딩 연습해보기
+    # Adder 클래스의 인스턴스를 생성
+    add_five = Adder(5)
+    # 인스턴스를 함수처럼 호출
+    result = add_five(10)
+    print(result)
 
 
 
